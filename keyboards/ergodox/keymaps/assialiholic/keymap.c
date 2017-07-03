@@ -39,15 +39,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Otherwise, it needs KC_*
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
-        KC_ESC,         KC_1,         KC_2,          KC_3,    KC_4,   KC_5,   KC_LEFT,
-        KC_TAB,         KC_Q,         KC_W,          KC_E,    KC_R,   KC_T,   TG(SYMB),
-        LT(SYMB, KC_CAPS), KC_A,      KC_S,          KC_D,    KC_F,   KC_G,
-        KC_LSFT,        KC_Z,         KC_X,          KC_C,    KC_V,   KC_B,   KC_TAB,
-        GUI_T(KC_NO),   KC_LALT,      CTL_T(KC_NO),  KC_LEFT, KC_RGHT,
+        KC_ESC,            KC_1,    KC_2,          KC_3,    KC_4,   KC_5,   KC_LEFT,
+        KC_TAB,            KC_Q,    KC_W,          KC_E,    KC_R,   KC_T,   TG(SYMB),
+        LT(SYMB, KC_CAPS), KC_A,    KC_S,          KC_D,    KC_F,   KC_G,
+        KC_LSFT,           KC_Z,    KC_X,          KC_C,    KC_V,   KC_B,   KC_HENK,
+        GUI_T(KC_QUOT),    KC_LALT, CTL_T(KC_NO),  KC_LEFT, KC_RGHT,
 
                                               ALT_T(KC_APP),  KC_FN19,
                                                               KC_HOME,
-                                             KC_MHEN, KC_SPC, KC_HENK,
+                                             KC_MHEN, CTL_T(KC_SPC), KC_HENK,
 
         // right hand
              KC_RGHT,      KC_6,   KC_7,  KC_8,    KC_9,    KC_0,              KC_BSPC,
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
              KC_FN19, CTL_T(KC_ESC),
              KC_PGUP,
-             KC_HENK, KC_SPC, KC_MHEN
+             KC_HENK, CTL_T(KC_SPC), KC_MHEN
     ),
 /* Keymap 1: Symbol Layer
  *
@@ -87,20 +87,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,
         KC_TAB, KC_Q, KC_7, KC_8, KC_9, KC_MINS, TG(SYMB),
         LT(SYMB, KC_CAPS), KC_DOWN, KC_4, KC_5, KC_6, KC_PLUS,
-        KC_LSFT, KC_AMPR, KC_1, KC_2, KC_3, KC_SLSH, KC_MHEN,
+        KC_LSFT, KC_AMPR, KC_1, KC_2, KC_3, KC_SLSH, KC_HENK,
         GUI_T(KC_NO), KC_LALT, KC_0, KC_DOT, KC_ASTR,
-                                        ALT_T(KC_APP),  KC_FN19,
-                                                        KC_HOME,
-                                           KC_SPC, KC_HENK,   KC_END,
+
+                             ALT_T(KC_APP),  KC_FN19,
+                                             KC_HOME,
+                            KC_MHEN, CTL_T(KC_SPC), KC_HENK,
+                            
        // right hand
        KC_F7, KC_F8,   KC_F9,  KC_F10,   KC_F11,   KC_F12,  KC_BSPC,
-       TG(SYMB),    KC_Y,   KC_U,  KC_MINUS,   KC_GRAVE,   KC_BSLASH,  KC_DELETE,
-                    KC_H,   KC_J,  KC_K,   KC_AT, KC_LBRC, KC_ENT,
-       KC_MHEN,KC_N,   KC_M,  KC_COMM, KC_SCOLON, KC_RBRC,   KC_RSFT,
+       TG(SYMB),    KC_Y,   KC_EQL,  KC_MINUS,   KC_GRAVE,   KC_BSLASH,  KC_DELETE,
+                    KC_H,   KC_J,  KC_CIRC,   KC_AT, KC_LBRC, KC_ENT,
+       KC_ENT,KC_N,   KC_M,  KC_COMM, KC_SCOLON, KC_RBRC,   KC_RSFT,
                             KC_COMMA, KC_DOT, KC_SLASH, KC_RBRC, KC_PLUS,
+
        KC_FN19, CTL_T(KC_ESC),
        KC_PGUP,
-       KC_PGDN, KC_HENK,  KC_ENT
+       KC_HENK, CTL_T(KC_SPC), KC_MHEN
 ),
 /* Keymap 2: Media and mouse keys
  *
