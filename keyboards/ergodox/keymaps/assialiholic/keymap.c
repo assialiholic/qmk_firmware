@@ -43,13 +43,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         // right hand
         JA_ENVL, KC_6, KC_7,  KC_8,    KC_9,    KC_0,    KC_BSPC,
-        KC_NO,   KC_Y, KC_U,  KC_I,    KC_O,    KC_P,    KC_MINS,
+        JA_CLON, KC_Y, KC_U,  KC_I,    KC_O,    KC_P,    KC_MINS,
                  KC_H, KC_J,  KC_K,    KC_L,    KC_SCLN, KC_ENT,
         KC_ENT,  KC_N, KC_M,  KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
                        KC_UP, KC_DOWN, JA_LBRC, JA_RBRC, A_S_T(JA_ENUN),
         TG(MDIA), KC_BSPC,
         KC_NO,
-        KC_NO, CTL_T(KC_SPC), KC_MHEN
+        JA_ENVL, CTL_T(KC_SPC), KC_MHEN
     ),
 /* Keymap 1: Symbol Layer */
 // SYMBOLS
