@@ -44,14 +44,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
         KC_ESC,            KC_1,    KC_2,          KC_3,    KC_4,   KC_5,   KC_QUOT,
-        KC_TAB,            KC_Q,    KC_W,          KC_E,    KC_R,   KC_T,   TG(SYMB),
+        A_S_T(KC_TAB),            KC_Q,    KC_W,          KC_E,    KC_R,   KC_T,   TG(SYMB),
         LT(SYMB, KC_CAPS), KC_A,    KC_S,          KC_D,    KC_F,   KC_G,
         KC_LSFT,           KC_Z,    KC_X,          KC_C,    KC_V,   KC_B,   KC_HENK,
         GUI_T(KC_NO),      KC_LALT, CTL_T(KC_NO),  KC_LEFT, KC_RGHT,
 
                                                                   KC_PLUS,  KC_LBRC,
-                                                                            KC_HOME,
-                                                           KC_MHEN, KC_SPC, KC_HENK,
+                                                                              KC_NO,
+                                                             KC_MHEN, KC_SPC, KC_NO,
 
         // right hand
              KC_BSLASH, KC_6, KC_7,  KC_8,    KC_9,    KC_0,              KC_BSPC,
@@ -61,8 +61,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               KC_UP, KC_DOWN, KC_LBRC, KC_RBRC,           A_S_T(KC_PLUS),
 
              KC_RBRC, KC_EQL,
-             KC_PGUP,
-             KC_HENK, CTL_T(KC_SPC), KC_MHEN
+             KC_NO,
+             KC_NO, CTL_T(KC_SPC), KC_MHEN
     ),
 /* Keymap 1: Symbol Layer
  *
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       KC_TRNS, KC_TRNS,
                                                KC_TRNS,
                              KC_TRNS, KC_TRNS, KC_TRNS,
-                            
+
        // right hand
        KC_F7,       KC_F8, KC_F9,    KC_F10,   KC_F11,    KC_F12,    KC_BSPC,
        TG(KC_TRNS), KC_Y,  KC_EQL,   KC_MINUS, KC_GRAVE,  KC_BSLASH, KC_DELETE,
